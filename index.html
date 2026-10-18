@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis Halloween Birthday Bash | 31st October • Thika</title>
+  <meta name="description" content="Official invitation to Lewis Halloween Birthday Bash on Saturday, 31st October in Thika. Dress Code: Halloween Costume. Please RSVP below.">
+  
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lewis Halloween Birthday Bash - 31st Oct, Thika">
+  <meta property="og:description" content="Dress Code: Full Halloween Costume. Let us know if you'll attend!">
+  <meta property="og:image" content="assets/hero.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎃</text></svg>">
+</head>
+<body class="spooky-theme">
+  <!-- Subtle Canvas for Floating Mist & Embers -->
+  <canvas id="spooky-canvas"></canvas>
+
+  <!-- Ambient Cursor Glow -->
+  <div id="flashlight-glow" class="flashlight"></div>
+
+  <!-- Lightning Overlay -->
+  <div id="lightning-overlay" class="lightning"></div>
+
+  <!-- Ambient Sound & Lightning Toggle -->
+  <div class="audio-controller">
+    <button id="toggle-sound-btn" class="audio-btn" aria-label="Toggle Halloween Audio">
+      <span id="audio-icon">🔇</span>
+      <span id="audio-status">Sound</span>
+    </button>
+    <button id="trigger-lightning-btn" class="lightning-btn" aria-label="Lightning Strike">
+      ⚡ <span>Storm</span>
+    </button>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span>🎃 <strong>HALLOWEEN NIGHT:</strong> Saturday, 31st October • Thika, Kenya • <u>Dress Code: Halloween Costume</u></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-emoji">🎃</span>
+        <span>LEWIS<span class="highlight">BASH</span></span>
+      </a>
+
+      <div class="nav-actions-mobile">
+        <a href="#dashboard" class="mobile-intel-link">Guestlist 📋</a>
+        <a href="#rsvp" class="nav-btn-rsvp nav-btn-mobile">RSVP ✍️</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="#intel" class="nav-link">Party Intel</a>
+        <a href="#dresscode" class="nav-link">Dress Code</a>
+        <a href="#rsvp" class="nav-btn-rsvp">RSVP Now ✍️</a>
+        <a href="#dashboard" class="nav-link client-view-pill">Client View (Guestlist) 📋</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-backdrop" style="background-image: url('assets/hero.jpg');"></div>
+      <div class="hero-vignette"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span>
+          <span>HALLOWEEN NIGHT • SATURDAY, 31ST OCTOBER</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-sub">YOU'RE INVITED TO</span>
+          <span class="title-main spooky-font">LEWIS</span>
+          <span class="title-accent">HALLOWEEN BIRTHDAY BASH</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Join Lewis for an unforgettable night of music, spooky cocktails, and Halloween madness in Thika. 
+          Costumes are strictly mandatory — dress to impress or frighten!
+        </p>
+
+        <!-- Live Countdown to October 31st -->
+        <div class="countdown-wrapper">
+          <div class="countdown-header">
+            <span>⏳</span>
+            <span>COUNTDOWN TO 31ST OCTOBER</span>
+          </div>
+          <div class="countdown-grid">
+            <div class="countdown-block">
+              <span class="countdown-number" id="cd-days">00</span>
+              <span class="countdown-label">DAYS</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-block">
+              <span class="countdown-number" id="cd-hours">00</span>
+              <span class="countdown-label">HOURS</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-block">
+              <span class="countdown-number" id="cd-minutes">00</span>
+              <span class="countdown-label">MINUTES</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-block">
+              <span class="countdown-number" id="cd-seconds">00</span>
+              <span class="countdown-label">SECONDS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick CTAs -->
+        <div class="hero-actions">
+          <a href="#rsvp" class="btn btn-primary">
+            <span>WILL YOU ATTEND? RSVP HERE ✍️</span>
+          </a>
+          <button id="add-calendar-btn" class="btn btn-ghost">
+            <span>📅 ADD TO CALENDAR</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLEEK PARTY INTEL -->
+    <section class="section intel-section" id="intel">
+      <div class="container">
+        <div class="intel-grid">
+          <div class="intel-card">
+            <div class="intel-icon">📅</div>
+            <h3>When</h3>
+            <p class="intel-highlight">Saturday, 31st October 2026</p>
+            <span class="intel-sub">Gates open at 6:30 PM till dawn</span>
+          </div>
+
+          <div class="intel-card">
+            <div class="intel-icon">📍</div>
+            <h3>Where</h3>
+            <p class="intel-highlight">Thika, Kenya</p>
+            <span class="intel-sub">Private Gated Estate (Pin sent on RSVP)</span>
+          </div>
+
+          <div class="intel-card featured-intel">
+            <div class="intel-icon">🎭</div>
+            <h3>Dress Code</h3>
+            <p class="intel-highlight">Halloween Costume</p>
+            <span class="intel-sub">Strictly required • No plain clothes!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DRESS CODE SHOWCASE -->
+    <section class="section dresscode-section" id="dresscode">
+      <div class="container">
+        <div class="dresscode-box">
+          <div class="dresscode-text">
+            <span class="section-badge">PARTY RULE</span>
+            <h2 class="section-title">THE DRESS CODE: <span class="highlight">HALLOWEEN COSTUME</span></h2>
+            <p>
+              It's Lewis birthday on Halloween night, so let's go all out! Vampires, witches, movie characters, funny outfits, or classic ghouls — pick your style and have fun with it.
+            </p>
+            <ul class="simple-rules-list">
+              <li>✔️ Any creative, scary, or hilarious costume welcome</li>
+              <li>❌ Strictly no street clothes — you will stick out like a sore thumb!</li>
+            </ul>
+          </div>
+          <div class="dresscode-mascot">
+            <img src="assets/mascot.jpg" alt="Halloween Party Mascot" class="mascot-thumb" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMPLE RSVP SECTION (ATTEND OR NOT) -->
+    <section class="section rsvp-section" id="rsvp">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">RSVP INVITATION</span>
+          <h2 class="section-title">WILL YOU <span class="highlight">ATTEND?</span></h2>
+          <p class="section-subtitle">
+            Please let Lewis know if you can make it to Thika on the 31st so we can finalize catering and drinks!
+          </p>
+        </div>
+
+        <div class="rsvp-card-wrapper">
+          <form id="simple-rsvp-form" class="simple-form">
+            <!-- Attendance Selector -->
+            <div class="attendance-toggle-group">
+              <label class="attendance-option">
+                <input type="radio" name="attendanceStatus" value="Attending" checked id="attending-yes">
+                <div class="attendance-box yes-box">
+                  <span class="att-emoji">🎃</span>
+                  <strong>Hell Yes, I'll Be There!</strong>
+                  <span class="att-desc">Count me in for the 31st</span>
+                </div>
+              </label>
+
+              <label class="attendance-option">
+                <input type="radio" name="attendanceStatus" value="Declined" id="attending-no">
+                <div class="attendance-box no-box">
+                  <span class="att-emoji">👻</span>
+                  <strong>Sorry, Can't Make It</strong>
+                  <span class="att-desc">Sending birthday love to Lewis</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="guest-name">Your Full Name *</label>
+                <input type="text" id="guest-name" name="guestName" placeholder="e.g. Sandra Kamau" required>
+              </div>
+
+              <div class="form-group">
+                <label for="guest-phone">WhatsApp / Phone Number *</label>
+                <input type="tel" id="guest-phone" name="guestPhone" placeholder="e.g. +254 712 345 678" required>
+              </div>
+            </div>
+
+            <!-- Conditional fields for attending guests -->
+            <div id="attending-fields">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="costume-idea">What Costume Are You Planning to Wear? *</label>
+                  <input type="text" id="costume-idea" name="costumeIdea" placeholder="e.g. Vampire / Witch / Wednesday Addams" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="plus-ones">Bringing Anyone With You?</label>
+                  <select id="plus-ones" name="plusOnes">
+                    <option value="0">Just Me</option>
+                    <option value="1">+1 (Also in costume)</option>
+                    <option value="2">+2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-message">Birthday Wish / Message for Lewis (Optional)</label>
+              <textarea id="guest-message" name="guestMessage" rows="2" placeholder="Leave a message for Lewis..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+              <span>SUBMIT MY RSVP ✉️</span>
+            </button>
+          </form>
+
+          <!-- Success Confirmation Box (Shown after submission) -->
+          <div id="rsvp-success-card" class="success-card" style="display: none;">
+            <div class="success-icon">🎉</div>
+            <h3 id="success-headline">Thank You for RSVPing!</h3>
+            <p id="success-message">Your response has been recorded. Lewis will see it on the guestlist below.</p>
+            
+            <div class="success-actions">
+              <button id="send-whatsapp-confirm-btn" class="btn btn-secondary">
+                <span>📱 Notify Lewis on WhatsApp</span>
+              </button>
+              <button id="reset-rsvp-btn" class="btn btn-ghost">
+                <span>Submit Another Response</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT DASHBOARD: RESPONSES THAT LEWIS / CLIENT CAN SEE -->
+    <section class="section dashboard-section" id="dashboard">
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <span class="section-badge">HOST & CLIENT PORTAL</span>
+            <h2 class="section-title">RSVP RESPONSES & <span class="highlight">GUESTLIST</span></h2>
+            <p class="dashboard-sub">
+              Live guestlist for Lewis. Responses submitted above appear here in real time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Metric Stat Cards -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">TOTAL RESPONSES</span>
+            <strong class="metric-value" id="stat-total">0</strong>
+          </div>
+          <div class="metric-card metric-yes">
+            <span class="metric-label">ATTENDING (YES)</span>
+            <strong class="metric-value" id="stat-attending">0</strong>
+          </div>
+          <div class="metric-card metric-no">
+            <span class="metric-label">CAN'T MAKE IT (NO)</span>
+            <strong class="metric-value" id="stat-declined">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">PLUS ONES</span>
+            <strong class="metric-value" id="stat-plusones">0</strong>
+          </div>
+        </div>
+
+        <!-- Responses Table / List -->
+        <div class="table-card">
+          <div class="table-filter-bar">
+            <span class="table-title">Live Guest Entries</span>
+            <div class="filter-pills">
+              <button class="filter-btn active" data-filter="all">All (<span id="filter-all-count">0</span>)</button>
+              <button class="filter-btn" data-filter="Attending">Attending (<span id="filter-yes-count">0</span>)</button>
+              <button class="filter-btn" data-filter="Declined">Declined (<span id="filter-no-count">0</span>)</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="guest-table" id="guest-table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Guest Name</th>
+                  <th>Contact</th>
+                  <th>Costume</th>
+                  <th>+1s</th>
+                  <th>Message for Lewis</th>
+                  <th>Time</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="guest-table-body">
+                <!-- Dynamically populated via script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <span class="footer-icon">🎃</span>
+      <h3 class="spooky-font">LEWIS HALLOWEEN BIRTHDAY BASH</h3>
+      <p class="footer-copy">
+        Saturday, 31st October 2026 • Thika, Kenya • Costume Mandatory
+      </p>
+      <p class="footer-copyright">
+        Designed for Lewis Birthday Bash
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
