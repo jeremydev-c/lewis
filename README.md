@@ -1,6 +1,6 @@
-# 🎃 Lewis Halloween Birthday Bash
+# 🎃 Lewis Turns 19 • Halloween Birthday Bash
 
-Official Halloween party invitation and real-time RSVP website for **Lewis's Birthday Bash** in Thika, Kenya on **Saturday, 31st October 2026**.
+Official Halloween party invitation and real-time RSVP website as **Lewis turns 19** in Thika, Kenya on **Saturday, 31st October 2026**.
 
 ## 🦇 Features
 

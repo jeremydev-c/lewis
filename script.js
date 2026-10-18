@@ -359,13 +359,13 @@ function initSimpleRSVPSystem() {
       if (whatsappNotifyBtn) {
         let msg = '';
         if (status === 'Attending') {
-          msg = `Hey Lewis! 🎃 I just RSVPed to your Halloween Birthday Bash on the 31st in Thika!\n` +
+          msg = `Hey Lewis! 🎃 I just RSVPed to your 19th Birthday Halloween Bash on the 31st in Thika!\n` +
                 `Status: ATTENDING\n` +
                 `Costume: ${costume}\n` +
                 (plusOnes !== '0' ? `Bringing: +${plusOnes}\n` : '') +
                 (message !== '—' ? `Message: "${message}"\n` : '');
         } else {
-          msg = `Hey Lewis! 👻 I got your Halloween Birthday invite for the 31st. Unfortunately I won't be able to make it, but wishing you an amazing birthday celebration!\n` +
+          msg = `Hey Lewis! 👻 I got your 19th Birthday Halloween invite for the 31st. Unfortunately I won't be able to make it, but wishing you an amazing 19th celebration!\n` +
                 (message !== '—' ? `"${message}"\n` : '');
         }
 
@@ -519,7 +519,7 @@ function initCalendarDownload() {
       "DTSTAMP:20261018T120000Z",
       "DTSTART:20261031T153000Z", // 18:30 UTC+3 = 15:30 UTC
       "DTEND:20261101T030000Z",
-      "SUMMARY:Lewis Halloween Birthday Bash (Thika)",
+      "SUMMARY:Lewis Turns 19 - Halloween Birthday Bash (Thika)",
       "DESCRIPTION:Saturday 31st October! Dress Code: Full Halloween Costume. Gates open 6:30 PM.",
       "LOCATION:Private Sanctuary Estate, Thika, Kenya",
       "STATUS:CONFIRMED",
